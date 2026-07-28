@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+results/smoke_*.json
+.DS_Store
+Thumbs.db
+*.pt
+*.pth
+.idea/
+.vscode/

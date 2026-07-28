@@ -1,0 +1,92 @@
+2026-07-28 08:51:56,687 | INFO | ========================================================================
+2026-07-28 08:51:56,688 | INFO | 开始实验 run01_grid5_obj6_seed7
+2026-07-28 08:51:56,688 | INFO | {"run_id": "run01_grid5_obj6_seed7", "seed": 7, "grid_size": 5, "n_objects": 6, "image_size": 32, "n_symbols": 64, "gumbel_epochs": 60, "gumbel_steps_per_epoch": 96, "pretrain_steps": 800, "interaction_steps": 400, "label_noise": 0.0, "device": "cpu"}
+2026-07-28 08:51:56,688 | INFO | 物体标签: ['red_cube', 'blue_cube', 'green_cube', 'yellow_cube', 'purple_cube', 'cyan_cube']
+2026-07-28 08:51:56,688 | INFO | --- B1 Vanilla Gumbel-softmax ---
+2026-07-28 08:51:57,582 | INFO | [pretrain] step=0 pos=3.1099 color=0.1270 vae=0.0665
+2026-07-28 08:51:58,601 | INFO | [pretrain] step=200 pos=3.8345 color=0.0016 vae=0.0194
+2026-07-28 08:51:59,018 | INFO | [vanilla] epoch=000 loss=1.8017 acc=0.156 diversity=49/64
+2026-07-28 08:51:59,493 | INFO | [vanilla] epoch=010 loss=1.7970 acc=0.156 diversity=49/64
+2026-07-28 08:51:59,919 | INFO | [vanilla] epoch=020 loss=1.7972 acc=0.219 diversity=48/64
+2026-07-28 08:52:00,245 | INFO | [vanilla] epoch=030 loss=1.7959 acc=0.177 diversity=48/64
+2026-07-28 08:52:00,611 | INFO | [vanilla] epoch=040 loss=1.7952 acc=0.135 diversity=52/64
+2026-07-28 08:52:01,110 | INFO | [vanilla] epoch=050 loss=1.7955 acc=0.177 diversity=51/64
+2026-07-28 08:52:01,442 | INFO | [vanilla] epoch=059 loss=1.7968 acc=0.156 diversity=46/64
+2026-07-28 08:52:01,468 | INFO | --- B2 High temperature ---
+2026-07-28 08:52:01,478 | INFO | [pretrain] step=0 pos=3.2218 color=0.1261 vae=0.0674
+2026-07-28 08:52:02,450 | INFO | [pretrain] step=200 pos=3.7571 color=0.0126 vae=0.0141
+2026-07-28 08:52:02,796 | INFO | [high_temp] epoch=000 loss=1.8004 acc=0.177 diversity=47/64
+2026-07-28 08:52:02,982 | INFO | [high_temp] epoch=010 loss=1.7989 acc=0.167 diversity=48/64
+2026-07-28 08:52:03,158 | INFO | [high_temp] epoch=020 loss=1.7981 acc=0.156 diversity=46/64
+2026-07-28 08:52:03,318 | INFO | [high_temp] epoch=030 loss=1.7975 acc=0.146 diversity=45/64
+2026-07-28 08:52:03,469 | INFO | [high_temp] epoch=040 loss=1.7972 acc=0.125 diversity=48/64
+2026-07-28 08:52:03,617 | INFO | [high_temp] epoch=050 loss=1.7964 acc=0.156 diversity=48/64
+2026-07-28 08:52:03,755 | INFO | [high_temp] epoch=059 loss=1.7970 acc=0.146 diversity=45/64
+2026-07-28 08:52:03,777 | INFO | --- B2 Entropy bonus ---
+2026-07-28 08:52:03,785 | INFO | [pretrain] step=0 pos=3.2690 color=0.1260 vae=0.0675
+2026-07-28 08:52:04,873 | INFO | [pretrain] step=200 pos=3.2811 color=0.0006 vae=0.0300
+2026-07-28 08:52:05,209 | INFO | [entropy] epoch=000 loss=1.6791 acc=0.156 diversity=49/64
+2026-07-28 08:52:05,373 | INFO | [entropy] epoch=010 loss=1.6720 acc=0.146 diversity=48/64
+2026-07-28 08:52:05,549 | INFO | [entropy] epoch=020 loss=1.6799 acc=0.208 diversity=50/64
+2026-07-28 08:52:05,725 | INFO | [entropy] epoch=030 loss=1.6850 acc=0.188 diversity=47/64
+2026-07-28 08:52:05,898 | INFO | [entropy] epoch=040 loss=1.6731 acc=0.146 diversity=49/64
+2026-07-28 08:52:06,068 | INFO | [entropy] epoch=050 loss=1.6794 acc=0.177 diversity=48/64
+2026-07-28 08:52:06,232 | INFO | [entropy] epoch=059 loss=1.6712 acc=0.156 diversity=46/64
+2026-07-28 08:52:06,254 | INFO | --- B2 Spectral norm ---
+2026-07-28 08:52:06,264 | INFO | [pretrain] step=0 pos=3.3417 color=0.1148 vae=0.0662
+2026-07-28 08:52:07,346 | INFO | [pretrain] step=200 pos=2.0773 color=0.0008 vae=0.0215
+2026-07-28 08:52:07,669 | INFO | [spectral] epoch=000 loss=1.7992 acc=0.167 diversity=46/64
+2026-07-28 08:52:07,801 | INFO | [spectral] epoch=010 loss=1.8004 acc=0.156 diversity=50/64
+2026-07-28 08:52:07,952 | INFO | [spectral] epoch=020 loss=1.7984 acc=0.177 diversity=51/64
+2026-07-28 08:52:08,106 | INFO | [spectral] epoch=030 loss=1.7958 acc=0.167 diversity=46/64
+2026-07-28 08:52:08,267 | INFO | [spectral] epoch=040 loss=1.7998 acc=0.156 diversity=46/64
+2026-07-28 08:52:08,422 | INFO | [spectral] epoch=050 loss=1.8013 acc=0.146 diversity=49/64
+2026-07-28 08:52:08,580 | INFO | [spectral] epoch=059 loss=1.7973 acc=0.167 diversity=50/64
+2026-07-28 08:52:08,607 | INFO | --- B5 Full three-layer (detach + Memory + DP-Means) ---
+2026-07-28 08:52:08,617 | INFO | [pretrain] step=0 pos=3.2896 color=0.1274 vae=0.0915
+2026-07-28 08:52:09,735 | INFO | [pretrain] step=200 pos=2.2703 color=0.0005 vae=0.0380
+2026-07-28 08:52:10,707 | INFO | [pretrain] step=400 pos=2.1253 color=0.0025 vae=0.0436
+2026-07-28 08:52:11,704 | INFO | [pretrain] step=600 pos=2.8329 color=0.0052 vae=0.0257
+2026-07-28 08:52:12,677 | INFO | [write-protect] interaction_steps=400 dpmeans=True n_objects=6
+2026-07-28 08:52:12,682 | INFO | [write-protect] t=0000 sym=30->30 div=3/64 mem_acc@recent=1.000 collisions=0 sub=0
+2026-07-28 08:52:12,778 | INFO | [write-protect] t=0050 sym=30->10001 div=3/64 mem_acc@recent=1.000 collisions=0 sub=4
+2026-07-28 08:52:12,878 | INFO | [write-protect] t=0100 sym=4->4 div=3/64 mem_acc@recent=1.000 collisions=0 sub=4
+2026-07-28 08:52:13,003 | INFO | [write-protect] t=0150 sym=50->10003 div=3/64 mem_acc@recent=1.000 collisions=0 sub=4
+2026-07-28 08:52:13,126 | INFO | [write-protect] t=0200 sym=30->10001 div=3/64 mem_acc@recent=1.000 collisions=0 sub=4
+2026-07-28 08:52:13,262 | INFO | [write-protect] t=0250 sym=4->4 div=3/64 mem_acc@recent=1.000 collisions=0 sub=4
+2026-07-28 08:52:13,392 | INFO | [write-protect] t=0300 sym=50->10003 div=3/64 mem_acc@recent=1.000 collisions=0 sub=4
+2026-07-28 08:52:13,641 | INFO | [write-protect] t=0350 sym=30->10001 div=3/64 mem_acc@recent=1.000 collisions=0 sub=4
+2026-07-28 08:52:13,808 | INFO | --- Ablation: without DP-Means (Layer3 off) ---
+2026-07-28 08:52:13,817 | INFO | [pretrain] step=0 pos=3.2874 color=0.1274 vae=0.0902
+2026-07-28 08:52:14,745 | INFO | [pretrain] step=200 pos=3.6838 color=0.0028 vae=0.0195
+2026-07-28 08:52:15,854 | INFO | [pretrain] step=400 pos=2.2917 color=0.0051 vae=0.0187
+2026-07-28 08:52:16,988 | INFO | [pretrain] step=600 pos=1.6696 color=0.0053 vae=0.0647
+2026-07-28 08:52:18,030 | INFO | [write-protect] interaction_steps=400 dpmeans=False n_objects=6
+2026-07-28 08:52:18,037 | INFO | [write-protect] t=0000 sym=50->50 div=3/64 mem_acc@recent=1.000 collisions=0 sub=0
+2026-07-28 08:52:18,139 | INFO | [write-protect] t=0050 sym=50->50 div=3/64 mem_acc@recent=0.647 collisions=1 sub=0
+2026-07-28 08:52:18,235 | INFO | [write-protect] t=0100 sym=50->50 div=3/64 mem_acc@recent=0.637 collisions=1 sub=0
+2026-07-28 08:52:18,328 | INFO | [write-protect] t=0150 sym=50->50 div=3/64 mem_acc@recent=0.600 collisions=1 sub=0
+2026-07-28 08:52:18,422 | INFO | [write-protect] t=0200 sym=50->50 div=3/64 mem_acc@recent=0.550 collisions=1 sub=0
+2026-07-28 08:52:18,517 | INFO | [write-protect] t=0250 sym=50->50 div=3/64 mem_acc@recent=0.588 collisions=1 sub=0
+2026-07-28 08:52:18,617 | INFO | [write-protect] t=0300 sym=50->50 div=3/64 mem_acc@recent=0.600 collisions=1 sub=0
+2026-07-28 08:52:18,723 | INFO | [write-protect] t=0350 sym=50->50 div=3/64 mem_acc@recent=0.575 collisions=1 sub=0
+2026-07-28 08:52:18,841 | INFO | --- 摘要 ---
+2026-07-28 08:52:18,841 | INFO | {
+  "vanilla_collapsed": false,
+  "vanilla_div": 54,
+  "vanilla_acc": 0.3333333432674408,
+  "anti_collapse_max_acc": 0.3333333432674408,
+  "anti_collapse_divs": {
+    "high_temp": 53,
+    "entropy": 53,
+    "spectral": 55
+  },
+  "full_memory_acc": 1.0,
+  "full_div": 3,
+  "full_rollout_div": 4,
+  "no_dpmeans_memory_acc": 0.5,
+  "trend_ok_negative": false,
+  "trend_ok_full_vs_ablation": true
+}
+2026-07-28 08:52:18,841 | INFO | 耗时 22.2s
+2026-07-28 08:52:18,842 | INFO | 结果已写入 F:\Git_Projects\write-protected-discrete-bottleneck\results\run01_grid5_obj6_seed7.json

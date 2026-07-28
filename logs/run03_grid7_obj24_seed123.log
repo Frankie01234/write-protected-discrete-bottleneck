@@ -1,0 +1,108 @@
+2026-07-28 08:52:44,091 | INFO | ========================================================================
+2026-07-28 08:52:44,091 | INFO | 开始实验 run03_grid7_obj24_seed123
+2026-07-28 08:52:44,091 | INFO | {"run_id": "run03_grid7_obj24_seed123", "seed": 123, "grid_size": 7, "n_objects": 24, "image_size": 32, "n_symbols": 64, "gumbel_epochs": 50, "gumbel_steps_per_epoch": 96, "pretrain_steps": 1200, "interaction_steps": 800, "label_noise": 0.0, "device": "cpu"}
+2026-07-28 08:52:44,091 | INFO | 物体标签: ['red_cube', 'blue_cube', 'green_cube', 'yellow_cube', 'purple_cube', 'cyan_cube', 'red_ball', 'blue_ball', 'green_ball', 'yellow_ball', 'purple_ball', 'cyan_ball', 'red_cylinder', 'blue_cylinder', 'green_cylinder', 'yellow_cylinder', 'purple_cylinder', 'cyan_cylinder', 'red_capsule', 'blue_capsule', 'green_capsule', 'yellow_capsule', 'purple_capsule', 'cyan_capsule']
+2026-07-28 08:52:44,093 | INFO | --- B1 Vanilla Gumbel-softmax ---
+2026-07-28 08:52:44,101 | INFO | [pretrain] step=0 pos=3.8476 color=0.1195 vae=0.0759
+2026-07-28 08:52:45,209 | INFO | [pretrain] step=200 pos=3.5486 color=0.0006 vae=0.0140
+2026-07-28 08:52:46,208 | INFO | [vanilla] epoch=000 loss=3.1796 acc=0.052 diversity=49/64
+2026-07-28 08:52:46,532 | INFO | [vanilla] epoch=010 loss=3.1812 acc=0.052 diversity=47/64
+2026-07-28 08:52:46,835 | INFO | [vanilla] epoch=020 loss=3.1811 acc=0.052 diversity=51/64
+2026-07-28 08:52:47,324 | INFO | [vanilla] epoch=030 loss=3.1834 acc=0.062 diversity=45/64
+2026-07-28 08:52:47,809 | INFO | [vanilla] epoch=040 loss=3.1783 acc=0.052 diversity=52/64
+2026-07-28 08:52:48,255 | INFO | [vanilla] epoch=049 loss=3.1802 acc=0.062 diversity=55/64
+2026-07-28 08:52:48,272 | INFO | --- B2 High temperature ---
+2026-07-28 08:52:48,279 | INFO | [pretrain] step=0 pos=3.8936 color=0.1186 vae=0.0703
+2026-07-28 08:52:49,314 | INFO | [pretrain] step=200 pos=4.8758 color=0.0033 vae=0.0258
+2026-07-28 08:52:50,362 | INFO | [high_temp] epoch=000 loss=3.1816 acc=0.062 diversity=50/64
+2026-07-28 08:52:50,538 | INFO | [high_temp] epoch=010 loss=3.1818 acc=0.031 diversity=47/64
+2026-07-28 08:52:50,711 | INFO | [high_temp] epoch=020 loss=3.1809 acc=0.031 diversity=51/64
+2026-07-28 08:52:50,884 | INFO | [high_temp] epoch=030 loss=3.1816 acc=0.062 diversity=45/64
+2026-07-28 08:52:51,026 | INFO | [high_temp] epoch=040 loss=3.1806 acc=0.052 diversity=51/64
+2026-07-28 08:52:51,146 | INFO | [high_temp] epoch=049 loss=3.1806 acc=0.042 diversity=54/64
+2026-07-28 08:52:51,166 | INFO | --- B2 Entropy bonus ---
+2026-07-28 08:52:51,180 | INFO | [pretrain] step=0 pos=4.1190 color=0.1189 vae=0.0707
+2026-07-28 08:52:52,153 | INFO | [pretrain] step=200 pos=3.3377 color=0.0000 vae=0.0117
+2026-07-28 08:52:53,085 | INFO | [entropy] epoch=000 loss=3.0465 acc=0.052 diversity=51/64
+2026-07-28 08:52:53,227 | INFO | [entropy] epoch=010 loss=3.0581 acc=0.052 diversity=48/64
+2026-07-28 08:52:53,361 | INFO | [entropy] epoch=020 loss=3.0733 acc=0.052 diversity=51/64
+2026-07-28 08:52:53,483 | INFO | [entropy] epoch=030 loss=3.0540 acc=0.062 diversity=47/64
+2026-07-28 08:52:53,616 | INFO | [entropy] epoch=040 loss=3.0618 acc=0.052 diversity=50/64
+2026-07-28 08:52:53,743 | INFO | [entropy] epoch=049 loss=3.0685 acc=0.062 diversity=55/64
+2026-07-28 08:52:53,760 | INFO | --- B2 Spectral norm ---
+2026-07-28 08:52:53,768 | INFO | [pretrain] step=0 pos=3.8767 color=0.1152 vae=0.0736
+2026-07-28 08:52:54,672 | INFO | [pretrain] step=200 pos=3.3659 color=0.0036 vae=0.0217
+2026-07-28 08:52:55,734 | INFO | [spectral] epoch=000 loss=3.1836 acc=0.031 diversity=52/64
+2026-07-28 08:52:55,879 | INFO | [spectral] epoch=010 loss=3.1806 acc=0.042 diversity=48/64
+2026-07-28 08:52:56,024 | INFO | [spectral] epoch=020 loss=3.1813 acc=0.042 diversity=48/64
+2026-07-28 08:52:56,164 | INFO | [spectral] epoch=030 loss=3.1832 acc=0.042 diversity=50/64
+2026-07-28 08:52:56,314 | INFO | [spectral] epoch=040 loss=3.1816 acc=0.042 diversity=48/64
+2026-07-28 08:52:56,442 | INFO | [spectral] epoch=049 loss=3.1809 acc=0.031 diversity=56/64
+2026-07-28 08:52:56,460 | INFO | --- B5 Full three-layer (detach + Memory + DP-Means) ---
+2026-07-28 08:52:56,468 | INFO | [pretrain] step=0 pos=4.0081 color=0.1012 vae=0.0591
+2026-07-28 08:52:57,366 | INFO | [pretrain] step=200 pos=3.4000 color=0.0018 vae=0.0147
+2026-07-28 08:52:58,347 | INFO | [pretrain] step=400 pos=4.5200 color=0.0001 vae=0.0132
+2026-07-28 08:52:59,235 | INFO | [pretrain] step=600 pos=3.4239 color=0.0008 vae=0.0090
+2026-07-28 08:53:00,168 | INFO | [pretrain] step=800 pos=3.4060 color=0.0033 vae=0.0073
+2026-07-28 08:53:01,100 | INFO | [pretrain] step=1000 pos=3.1782 color=0.0012 vae=0.0204
+2026-07-28 08:53:02,111 | INFO | [write-protect] interaction_steps=800 dpmeans=True n_objects=24
+2026-07-28 08:53:02,117 | INFO | [write-protect] t=0000 sym=60->60 div=1/64 mem_acc@recent=1.000 collisions=0 sub=0
+2026-07-28 08:53:02,227 | INFO | [write-protect] t=0050 sym=60->10019 div=1/64 mem_acc@recent=0.902 collisions=0 sub=20
+2026-07-28 08:53:02,376 | INFO | [write-protect] t=0100 sym=60->10009 div=1/64 mem_acc@recent=0.900 collisions=0 sub=22
+2026-07-28 08:53:02,526 | INFO | [write-protect] t=0150 sym=60->10005 div=1/64 mem_acc@recent=0.938 collisions=0 sub=22
+2026-07-28 08:53:02,678 | INFO | [write-protect] t=0200 sym=60->10015 div=1/64 mem_acc@recent=0.963 collisions=0 sub=22
+2026-07-28 08:53:02,845 | INFO | [write-protect] t=0250 sym=60->10022 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:02,974 | INFO | [write-protect] t=0300 sym=60->10008 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:03,095 | INFO | [write-protect] t=0350 sym=60->10010 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:03,218 | INFO | [write-protect] t=0400 sym=60->10004 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:03,498 | INFO | [write-protect] t=0450 sym=60->10011 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:03,648 | INFO | [write-protect] t=0500 sym=60->10021 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:03,761 | INFO | [write-protect] t=0550 sym=60->10013 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:03,884 | INFO | [write-protect] t=0600 sym=60->60 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:04,046 | INFO | [write-protect] t=0650 sym=60->10001 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:04,156 | INFO | [write-protect] t=0700 sym=60->10003 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:04,254 | INFO | [write-protect] t=0750 sym=60->10005 div=1/64 mem_acc@recent=1.000 collisions=0 sub=23
+2026-07-28 08:53:04,371 | INFO | --- Ablation: without DP-Means (Layer3 off) ---
+2026-07-28 08:53:04,378 | INFO | [pretrain] step=0 pos=4.0368 color=0.1010 vae=0.0607
+2026-07-28 08:53:05,127 | INFO | [pretrain] step=200 pos=3.5349 color=0.0104 vae=0.0071
+2026-07-28 08:53:05,837 | INFO | [pretrain] step=400 pos=3.0007 color=0.0035 vae=0.0197
+2026-07-28 08:53:06,564 | INFO | [pretrain] step=600 pos=2.8222 color=0.0005 vae=0.0167
+2026-07-28 08:53:07,376 | INFO | [pretrain] step=800 pos=3.7414 color=0.0125 vae=0.0118
+2026-07-28 08:53:08,357 | INFO | [pretrain] step=1000 pos=5.0330 color=0.0008 vae=0.0158
+2026-07-28 08:53:09,202 | INFO | [write-protect] interaction_steps=800 dpmeans=False n_objects=24
+2026-07-28 08:53:09,208 | INFO | [write-protect] t=0000 sym=4->4 div=3/64 mem_acc@recent=1.000 collisions=0 sub=0
+2026-07-28 08:53:09,316 | INFO | [write-protect] t=0050 sym=4->4 div=3/64 mem_acc@recent=0.176 collisions=3 sub=0
+2026-07-28 08:53:09,439 | INFO | [write-protect] t=0100 sym=8->8 div=3/64 mem_acc@recent=0.163 collisions=3 sub=0
+2026-07-28 08:53:09,527 | INFO | [write-protect] t=0150 sym=19->19 div=3/64 mem_acc@recent=0.212 collisions=3 sub=0
+2026-07-28 08:53:09,637 | INFO | [write-protect] t=0200 sym=8->8 div=3/64 mem_acc@recent=0.175 collisions=3 sub=0
+2026-07-28 08:53:09,732 | INFO | [write-protect] t=0250 sym=8->8 div=3/64 mem_acc@recent=0.175 collisions=3 sub=0
+2026-07-28 08:53:09,819 | INFO | [write-protect] t=0300 sym=8->8 div=3/64 mem_acc@recent=0.150 collisions=3 sub=0
+2026-07-28 08:53:09,918 | INFO | [write-protect] t=0350 sym=19->19 div=3/64 mem_acc@recent=0.138 collisions=3 sub=0
+2026-07-28 08:53:10,004 | INFO | [write-protect] t=0400 sym=4->4 div=3/64 mem_acc@recent=0.150 collisions=3 sub=0
+2026-07-28 08:53:10,095 | INFO | [write-protect] t=0450 sym=19->19 div=3/64 mem_acc@recent=0.200 collisions=3 sub=0
+2026-07-28 08:53:10,186 | INFO | [write-protect] t=0500 sym=8->8 div=3/64 mem_acc@recent=0.200 collisions=3 sub=0
+2026-07-28 08:53:10,339 | INFO | [write-protect] t=0550 sym=8->8 div=3/64 mem_acc@recent=0.175 collisions=3 sub=0
+2026-07-28 08:53:10,465 | INFO | [write-protect] t=0600 sym=8->8 div=3/64 mem_acc@recent=0.175 collisions=3 sub=0
+2026-07-28 08:53:10,687 | INFO | [write-protect] t=0650 sym=4->4 div=3/64 mem_acc@recent=0.163 collisions=3 sub=0
+2026-07-28 08:53:10,838 | INFO | [write-protect] t=0700 sym=8->8 div=3/64 mem_acc@recent=0.175 collisions=3 sub=0
+2026-07-28 08:53:10,946 | INFO | [write-protect] t=0750 sym=19->19 div=3/64 mem_acc@recent=0.150 collisions=3 sub=0
+2026-07-28 08:53:11,085 | INFO | --- 摘要 ---
+2026-07-28 08:53:11,086 | INFO | {
+  "vanilla_collapsed": false,
+  "vanilla_div": 49,
+  "vanilla_acc": 0.0833333358168602,
+  "anti_collapse_max_acc": 0.0833333358168602,
+  "anti_collapse_divs": {
+    "high_temp": 50,
+    "entropy": 50,
+    "spectral": 54
+  },
+  "full_memory_acc": 1.0,
+  "full_div": 1,
+  "full_rollout_div": 1,
+  "no_dpmeans_memory_acc": 0.125,
+  "trend_ok_negative": true,
+  "trend_ok_full_vs_ablation": true
+}
+2026-07-28 08:53:11,086 | INFO | 耗时 27.0s
+2026-07-28 08:53:11,087 | INFO | 结果已写入 F:\Git_Projects\write-protected-discrete-bottleneck\results\run03_grid7_obj24_seed123.json
